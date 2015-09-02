@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:id="@+id/loginTextView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15sp"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nicknameEditText"
+        android:hint="@string/nickname"
+        android:layout_marginLeft="20sp"
+        android:inputType="textPersonName"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailEditText"
+        android:hint="@string/email"
+        android:layout_marginLeft="20sp"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:id="@+id/loginButton"
+        android:layout_gravity="center_horizontal"
+        android:onClick="login" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="devlogin"
+        android:id="@+id/devlogin"
+        android:layout_gravity="center_horizontal"
+        android:onClick="devLogin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user A Login"
+        android:id="@+id/userALogin"
+        android:layout_gravity="center_horizontal"
+        android:onClick="userALogin" />
+
+
+</LinearLayout>

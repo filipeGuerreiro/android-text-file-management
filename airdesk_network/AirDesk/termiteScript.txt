@@ -1,0 +1,18 @@
+# lanch 2 emulator
+demu
+demu
+
+# assings ip addrs
+assignaddr emulator-5554
+assignaddr emulator-5556
+
+
+binddevice A emulator-5554
+binddevice B emulator-5556
+
+move A (B)
+commit
+
+creategroup A (B)
+commit
+  

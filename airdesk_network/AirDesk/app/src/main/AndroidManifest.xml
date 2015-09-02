@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pt.ulisboa.tecnico.cmov.airdesk">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".business.GlobalContext"
+
+        android:allowBackup="true"
+        tools:replace="android:label,android:icon"
+        android:icon="@mipmap/ic_launcher"
+        android:label="AirDesk"
+        android:theme="@style/AppTheme" >
+
+        <service android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
+
+        <activity
+            android:name=".gui.LoginActivity"
+            android:label="LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.LoginActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".gui.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".gui.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.LoginActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.CreateWorkspaceActivity"
+            android:label="CreateWorkspaceActivity"
+            android:parentActivityName=".gui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.DeleteWorkspaceActivity"
+            android:label="DeleteWorkspaceActivity"
+            android:parentActivityName=".gui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.ViewOwnedWorkspaceActivity"
+            android:label="ViewOwnedWorkspaceActivity"
+            android:parentActivityName=".gui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.ViewForeignWorkspaceActivity"
+            android:label="ViewForeignWorkspaceActivity"
+            android:parentActivityName=".gui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.FileEditActivity"
+            android:label="FileEditActivity"
+            android:parentActivityName=".gui.ViewOwnedWorkspaceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.ViewOwnedWorkspaceActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.VisibilityActivity"
+            android:label="VisibilityActivity"
+            android:parentActivityName=".gui.ViewOwnedWorkspaceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.ViewOwnedWorkspaceActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.ACLActivity"
+            android:label="ACLActivity"
+            android:parentActivityName=".gui.ViewOwnedWorkspaceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.ViewOwnedWorkspaceActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.SearchActivity"
+            android:label="SearchActivity"
+            android:parentActivityName=".gui.ViewOwnedWorkspaceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.ViewOwnedWorkspaceActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.ConfigQuotasActivity"
+            android:label="ConfigQuotasActivity"
+            android:parentActivityName=".gui.ViewOwnedWorkspaceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.ViewOwnedWorkspaceActivity" />
+        </activity>
+
+        <activity
+            android:name=".gui.DeleteFileActivity"
+            android:label="DeleteFileActivity"
+            android:parentActivityName=".gui.ViewOwnedWorkspaceActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.ViewOwnedWorkspaceActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
